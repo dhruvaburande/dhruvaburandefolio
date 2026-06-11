@@ -696,7 +696,15 @@ footer {
 .fade-in:nth-child(7) { animation-delay: 0.6s; }
 
 @media (max-width: 991px) {
-  nav { padding: 0 20px; }
+  nav {
+    padding: 0 20px;
+    justify-content: flex-end;   /* push everything to the right */
+  }
+
+  /* Hide the logo text completely on mobile */
+  .nav-name {
+    display: none;
+  }
 
   .nav-links {
     display: none;
@@ -716,9 +724,9 @@ footer {
   }
 
   .nav-links.open { display: flex; }
-  
+
   .theme-toggle {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 16px;
   }
 
@@ -751,6 +759,7 @@ footer {
 
 <nav>
   <a class="nav-name" href="#hero">Dhruva Burande</a>
+
   <ul class="nav-links" id="navLinks">
     <li><a href="#about" onclick="closeNav()">About</a></li>
     <li><a href="#experience" onclick="closeNav()">Work</a></li>
@@ -760,9 +769,13 @@ footer {
     <li><a href="#certificates" onclick="closeNav()">Awards</a></li>
     <li><a href="#contact" onclick="closeNav()">Contact</a></li>
   </ul>
-  
+
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
   </button>
 
   <button class="nav-toggle" onclick="toggleNav()" id="navToggle" aria-label="Toggle menu">
@@ -775,7 +788,7 @@ footer {
 <section id="hero">
   <div class="hero-eyebrow fade-in">Portfolio · 2026</div>
   <h1 class="hero-name fade-in">Dhruva<br><em>Burande</em></h1>
-  <p class="hero-tagline fade-in">Writer. Poet. Editor. Published in two anthologies and counting.</p>
+  <p class="hero-tagline fade-in">Writer. Poet. Editor. Published in three anthologies and counting.</p>
   <p class="hero-desc fade-in">English Literature · Content Writer · Published Poet.<br>
   Postgraduate from Modern College, Pune. Writing across forms — editorial, creative, critical.</p>
   <div class="hero-contact fade-in">
@@ -796,9 +809,7 @@ footer {
 <section id="about">
   <div class="section-label">About</div>
   <h2 class="section-title">Writer. Researcher.<br><em style="font-family:var(--serif);font-style:italic;font-weight:300">Literary Practitioner.</em></h2>
-  <p class="about-text">I write with the belief that precision is more valuable than volume. My training in English Literature has sharpened how I read and, by extension, how I write — closely, critically, with sustained attention to what language is doing beneath the surface.</p>
-  <p class="about-text">Professionally, I have written content for digital platforms, tutored language and literature across school grade levels, and worked as a behavioural therapist — each role demanding a different calibration of communication.</p>
-  <p class="about-text">My creative writing has found its way into three published poetry anthologies. My academic writing has produced a research paper in English Criticism engaging with Baudrillard, phenomenology, and literary theory. I am available for content writing, editorial work, proofreading, and academic writing projects.</p>
+  <p class="about-text">I am an experienced writer, editor, and educator with a strong background in English Literature. My professional history spans digital content creation, academic research in literary theory, and instructional work across various grade levels. With three published poetry anthologies and a focus on precise, analytical communication, I provide professional editorial, proofreading, and writing services tailored to your specific needs.</p>
   <div class="lang-row">
     <span class="lang-pill">English</span>
     <span class="lang-pill">German</span>
@@ -897,6 +908,7 @@ footer {
 <section id="projects">
   <div class="section-label">Selected Publications</div>
   <h2 class="section-title">Published Work &amp; Research</h2>
+
   <p style="font-family: var(--serif); font-style: italic; color: var(--ink2); font-size: var(--fs-body); margin-top: -20px; margin-bottom: 45px; max-width: 760px; line-height: 1.6; letter-spacing: 0.02em;">
     "...As for the leaf that falls, Even October awaits / An unfinished poem Begs for a fitting closure, / A lytic mind longs for respite, / An artery pines for a rupture, / A dead cigarette yearns for another kiss..."
   </p>
